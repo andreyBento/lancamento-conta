@@ -1,0 +1,43 @@
+@import "../../variables";
+
+.nav{
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-size: 14px;
+
+  @media (min-width: 992px){
+    font-size: 18px;
+  }
+
+  .lista{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+    .link{
+      color: $azul;
+    }
+
+    li{
+
+      & + li{
+        display: flex;
+        align-items: center;
+
+        &::before{
+          content: '>';
+          display: inline-block;
+          margin-left: 4px;
+          margin-right: 4px;
+        }
+      }
+
+      p{
+        margin: 0;
+      }
+    }
+  }
+}
