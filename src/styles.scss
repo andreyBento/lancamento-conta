@@ -42,3 +42,37 @@ body{
     max-width: 1400px;
   }
 }
+
+.titulo{
+  font-weight: 700;
+
+  .h1{
+    font-size: 32px;
+  }
+
+  .h2{
+    font-size: 28px;
+  }
+}
+
+.extra-bold{ font-weight: 900; }
+
+.fieldset{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.label{
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input{
+  width: 100%;
+  padding: 16px;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 12px;
+  border: 1px solid #DDDDDD;
+}

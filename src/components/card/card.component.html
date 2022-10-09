@@ -1,0 +1,22 @@
+<div class="lancamento" [ngClass]="small ? 'small' : ''">
+  <div class="header">
+    <div class="esfera" [title]="'Pagamento via: ' + itemData?.channel">
+      <img class="icone" [src]="itemData?.channel === 'Máquina' ? '/assets/images/icone-maquina.png' : '/assets/images/icone-superlink.png'" alt="Canal de pagamento">
+      <p class="via">{{itemData?.channel}}</p>
+    </div>
+    <div class="esfera" [title]="'Pagamento status: ' + itemData?.status" [ngClass]="itemData?.status === 'Aprovada' ? 'aprovada' : 'rejeitada'">
+      <fa-icon class="icone" [icon]="itemData?.status === 'Aprovada' ? 'check' : 'times'"></fa-icon>
+      <p class="status">{{itemData?.status}}</p>
+    </div>
+  </div>
+  <p class="pagamento-tipo">{{itemData?.paymentType}}</p>
+  <div class="card">
+    <img class="esquerda" [src]="itemData?.channel === 'Máquina' ? '/assets/images/img-esquerda-card.png' : '/assets/images/img-esquerda-card-superlink.png'" alt="Icone">
+    <img class="direita" src="/assets/images/img-direita-card.png" alt="Icone">
+    <img [src]="itemData?.cardBrand === 'Mastercard' ? '/assets/images/bandeira-mastercard.png' : '/assets/images/bandeira-visa.png'" alt="bandeira" class="bandeira">
+    <p class="card-numero">{{itemData?.truncatedCardNumber}}</p>
+  </div>
+  <p class="valor-total" title="Valor final recebido">{{itemData?.netAmount}}</p>
+  <p class="valor-taxas" title="Valor total - Valor de taxas">{{itemData?.grossAmount}} - {{itemData?.mdrFeeAmount?.toString()?.slice(1)}}</p>
+  <p class="codigo" title="Código de autorização">{{itemData?.authorizationCode}}</p>
+</div>

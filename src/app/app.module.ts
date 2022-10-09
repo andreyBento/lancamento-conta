@@ -7,12 +7,14 @@ import {BreadcrumbComponent} from "../components/breadcrumb/breadcrumb.component
 import {HeaderComponent} from "../components/header/header.component";
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faUser, faMoneyBill, faWallet, faCalendar, faCreditCard, faList, faCheck, faTimes, faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import {CardComponent} from "../components/card/card.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         BreadcrumbComponent,
-        HeaderComponent
+        HeaderComponent,
+        CardComponent
     ],
   imports: [
     BrowserModule,

@@ -3,6 +3,53 @@
 
 <div class="container">
   <breadcrumb></breadcrumb>
+  <h1 class="titulo h1">Lançamento em conta</h1>
+  <section class="sect-valores">
+    <div class="valor-card">
+      <div class="esfera">
+        <fa-icon icon="money-bill"></fa-icon>
+      </div>
+      <p class="valor">{{valorTotal}}</p>
+      <p class="legenda">Total</p>
+    </div>
+    <div class="valor-card">
+      <div class="esfera">
+        <fa-icon icon="wallet"></fa-icon>
+      </div>
+      <p class="valor">{{valorTotalTaxado}}</p>
+      <p class="legenda">Total - Taxas</p>
+    </div>
+  </section>
+  <form class="form-filtro">
+    <fieldset class="fieldset">
+      <label for="comeco" class="label">Começa em:</label>
+      <input type="date" class="input" name="comeco" id="comeco" [value]="data.summary.initialDate">
+    </fieldset>
+    <fieldset class="fieldset">
+      <label for="termino" class="label">Termina em:</label>
+      <input type="date" class="input" name="termino" id="termino" [value]="data.summary.finalDate">
+    </fieldset>
+  </form>
+  <div class="views-actions">
+    <button class="btn-icon" [ngClass]="{'active' : viewType === 'card'}" (click)="viewType = 'card'">
+      <fa-icon icon="credit-card"></fa-icon>
+    </button>
+    <button class="btn-icon" [ngClass]="{'active' : viewType === 'list'}" (click)="viewType = 'list'">
+      <fa-icon icon="list"></fa-icon>
+    </button>
+  </div>
+  <section class="section-itens" [ngClass]="viewType === 'list' ? 'list' : ''">
+    <card *ngFor="let item of data.items" [itemData]="item" [small]="viewType === 'list' && true"></card>
+  </section>
+  <div class="paginacao">
+    <button class="btn-pag esquerda" [disabled]="data.pagination.firstPage" [ngClass]="data.pagination.firstPage ? 'disabled' : ''">
+      <fa-icon class="icone" icon="caret-left"></fa-icon>
+    </button>
+    <button class="btn-pag pagina">{{data.pagination.pageNumber}}</button>
+    <button class="btn-pag direita" [disabled]="data.pagination.lastPage" [ngClass]="data.pagination.lastPage ? 'disabled' : ''">
+      <fa-icon class="icone" icon="caret-right"></fa-icon>
+    </button>
+  </div>
 </div>
 
 

@@ -1,0 +1,169 @@
+@import "../variables";
+
+.sect-valores{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  column-gap: 64px;
+
+  @media (min-width: 500px){
+    flex-direction: row;
+  }
+}
+
+.valor-card{
+  text-align: center;
+
+  .esfera{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
+    color: $azul;
+    font-size: 32px;
+  }
+
+  .valor{
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: 900;
+    color: black;
+  }
+
+  .legenda{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.form-filtro{
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  column-gap: 16px;
+  margin-top: 32px;
+
+  @media (min-width: 768px){
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 540px;
+  }
+
+  .fieldset{
+    width: 100%;
+
+    @media (min-width: 768px){
+      width: 50%;
+    }
+  }
+}
+
+.views-actions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.btn-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  font-size: 32px;
+  color: $cinza;
+  border: none;
+  border-radius: 20px;
+  transition: all ease 0.4s;
+  cursor: pointer;
+
+  &:hover{
+    background-color: darken(white, 10%);
+  }
+
+  &.active{
+    background-color: $azul;
+    color: white;
+  }
+}
+
+.section-itens{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 32px;
+  column-gap: 32px;
+  margin-top: 64px;
+
+  @media (min-width: 768px){
+    column-gap: 64px;
+    row-gap: 64px;
+  }
+
+  @media (min-width: 992px){
+    column-gap: 96px;
+  }
+
+  @media (min-width: 1200px){
+    column-gap: 170px;
+  }
+
+  &.list{
+    row-gap: 32px;
+    column-gap: 32px;
+
+    @media (min-width: 992px){
+      column-gap: 64px;
+      row-gap: 64px;
+    }
+  }
+}
+
+.paginacao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+
+  .btn-pag{
+    padding: 14px 16px;
+    background-color: white;
+    color: $cinza;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+
+    &:hover{
+      background-color: darken(white, 10%);
+    }
+
+    &.disabled{
+      background-color: darken(white, 5%);
+      cursor: not-allowed;
+
+      &:hover{
+        background-color: darken(white, 5%);
+      }
+    }
+  }
+}
