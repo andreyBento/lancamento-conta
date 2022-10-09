@@ -1,4 +1,3 @@
-@import "../../variables";
 .lancamento{
   position: relative;
   top: 0;
@@ -9,16 +8,20 @@
   border-radius: 20px;
   box-shadow: 0 3px 6px rgba(#5A646E, 0.16);
   transition: all ease 0.4s;
+
   @media (min-width: 360px){
     min-width: 340px;
   }
+
   @media (min-width: 992px){
     padding: 32px;
     border-radius: 40px;
   }
+
   @media (min-width: 1200px){
     min-width: 440px;
   }
+
   .pagamento-tipo{
     margin-top: 0;
     margin-bottom: 16px;
@@ -28,13 +31,14 @@
       font-size: 28px;
     }
   }
+
   .valor-total{
     margin-top: 16px;
     margin-bottom: 8px;
     text-align: right;
     font-size: 32px;
     font-weight: 900;
-    color: $azul;
+    color: #00AEEF;
     @media (min-width: 768px){
       font-size: 48px;
     }
@@ -42,6 +46,7 @@
       font-size: 64px;
     }
   }
+
   .valor-taxas{
     margin-top: 0;
     margin-bottom: 0;
@@ -55,6 +60,7 @@
       font-size: 32px;
     }
   }
+
   .codigo{
     margin-top: 0;
     margin-bottom: 0;
@@ -66,6 +72,7 @@
       font-size: 32px;
     }
   }
+
   .card{
     position: relative;
     margin-left: -32px;
@@ -114,6 +121,7 @@
       bottom: -80px;
     }
   }
+
   .header{
     display: flex;
     align-items: center;
@@ -133,7 +141,7 @@
       justify-content: center;
       width: 40px;
       height: 40px;
-      background-color: $azul-claro;
+      background-color: #00AEEF-claro;
       font-size: 16px;
       color: white;
       border-radius: 50%;
@@ -149,11 +157,11 @@
       }
 
       &.aprovada{
-        background-color: $verde;
+        background-color: #80DEB3;
       }
 
       &.rejeitada{
-        background-color: $vermelho;
+        background-color: #DE8080;
       }
     }
     .via,
@@ -161,6 +169,7 @@
       display: none;
     }
   }
+
   &:hover{
     top: -8px;
     left: -8px;
@@ -169,6 +178,7 @@
       margin-left: -64px;
     }
   }
+
   &.small{
     min-width: 255px;
     .card{
@@ -219,13 +229,13 @@
         width: auto;
         height: auto;
         background-color: transparent;
-        color: $cinza;
+        color: #5A646E;
         border-radius: 0;
         &.aprovada{
-          color: $verde;
+          color: #80DEB3;
         }
         &.rejeitada{
-          color: $vermelho;
+          color: #DE8080;
         }
       }
       .via,
