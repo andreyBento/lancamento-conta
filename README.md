@@ -1,27 +1,15 @@
-# LancamentoConta
+# Projeto da Cielo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+## Lançamento em conta
 
-## Development server
+Esse projeto foi desenvolvido utilizando Angular 12 e SCSS.
+O JSON utilizado como fonte de dados foi fornecido pelo avaliador do trabalho.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalando o projeto
 
-## Code scaffolding
+Para instalar o projeto basta rodar `npm install` com uma versão do node apropriada, preferencialmente a 14.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Servidor de desenvolvimento
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para rodar o servidor use `ng serve`.
+O servidor ficará hospedado em `http://localhost:4200/`.
